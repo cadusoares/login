@@ -5,7 +5,7 @@ Sistema de login em PHP e JavaScript.
 
 # Passo a passo em todo inicio de aula 
 
-   ##Habilitar o Proxy
+   ## Habilitar o Proxy
 Tecla Windows - Abrir a janela Prompt de Comando
 Copie e cole a linha abaixo - selecione e pressione as teclas Ctrl C
 
