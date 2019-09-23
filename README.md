@@ -1,11 +1,17 @@
 # login
 Sistema de login em PHP e JavaScript.
 
+# aula01 - 23/09/2019
+🌺🍀 Começou a Primavera 🌻🌷 
+Aula inicial, configuração do projeto no Github.
+E criação do passo a passo.
+
 --- 
 
 # Passo a passo em todo inicio de aula 
 
    ## Habilitar o Proxy
+
 Tecla Windows - Abrir a janela Prompt de Comando
 Copie e cole a linha abaixo - selecione e pressione as teclas Ctrl C
 
