@@ -157,6 +157,51 @@
         
         <!-- Fim da Seção de Recuperação de Senha -->
 
+        <!-- Início do Formulário de Cadastro de novos usuários -->
+
+        <section class="row-mt-5">
+        
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaRegistro">
+            
+                <h2 class="text-center mt-2">Registre-se aqui</h2>
+                <form action="#" method="post" class="p-2" id="formRegistro">
+
+                    <div class="form-group">
+
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" 
+                        class="form-control" placeholder="Nome completo">
+
+                    </div>
+
+                    <div class="form-group">
+                    
+                        <input type="text" name="nomeUsuario" id="nomeUsuario"
+                        id="nomeUsuario" class="form-control" placeholder="Nome de usuário">
+
+                    </div>
+
+                    <div>
+
+                        <input type="email" name="emailUsuario" id="emailUsuario" 
+                        class="form-control" placeholder="E-mail">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="password" name="senhaUsuario" id="senhaUsuario"
+                        class="form-control" placeholder="Senha">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final do Formulário de novos usuários -->
 
     </main>
 
