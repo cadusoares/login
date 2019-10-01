@@ -256,12 +256,12 @@
                 $("#caixaLogin").show(); //Mostrar
             });
 
-            $("btnRegistrarNovo").click(function() {
+            $("#btnRegistrarNovo").click(function() {
                 $("#caixaLogin").hide(); //Ocultar
                 $("#caixaRegistro").show(); //Mostrar
             });
 
-            $("btnJaRegristrado2").click(function() {
+            $("#btnJaRegistrado2").click(function() {
                 $("#caixaRegistro").hide(); //Ocultar
                 $("#caixaLogin").show(); //Mostrar
             });
