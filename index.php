@@ -15,6 +15,8 @@
 
     <title>Sistema de Login</title>
 
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
     <style>
         #alerta,
         #caixaSenha,
@@ -54,13 +56,13 @@
 
                     <div class="form-group">
 
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" required minlength="5">
 
                     </div>
 
                     <div class="form-group">
 
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6">
 
                     </div>
 
@@ -127,7 +129,7 @@
 
                     <div class="form-group">
 
-                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha">
+                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha" required>
 
                     </div>
 
@@ -166,35 +168,35 @@
 
                     <div class="form-group">
 
-                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome completo">
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome completo" required minlength="6">
 
                     </div>
 
                     <div class="form-group">
 
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control" placeholder="Nome de usuário">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control" placeholder="Nome de usuário" required minlength="5">
 
                     </div>
 
                     <div class="form-group">
 
-                        <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail">
+                        <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail" required>
 
                     </div>
 
                     <div class="form-group">
 
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" class="form-control" placeholder="Senha">
+                        <input type="password" name="senhaDoUsuario" id="senhaDoUsuario" class="form-control" placeholder="Senha" required minlength="6">
 
                     </div>
 
                     <div class="form-group">
 
-                        <input type="password" name="confirmacaoSenhaUsuario" id="confirmacaoSenhaUsuario" class="form-control" placeholder="Confirmação de Senha">
+                        <input type="password" name="confirmacaoSenhaUsuario" id="confirmacaoSenhaUsuario" class="form-control" placeholder="Confirmação de Senha" required minlength="6">
 
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-4">
 
                         <div class="custom-control custom-checkbox">
 
@@ -238,13 +240,31 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 
     <script>
         // codigo jQuery para mostrar e ocultar os formulários
+
         $(function() {
+
+            //Validação de Formulários 
+
+            jQuery.validator.setDefaults({
+                success: "valid"
+            });
+            $("#formRegistro").validate({
+                rules: {
+                    senhaDoUsuario: "required",
+                    confirmacaoSenhaUsuario: {
+                        equalTo: "#senhaDoUsuario"
+                    }
+                }
+            });
+
+            //Mostrar e Ocultar Formulários
 
             $("#btnEsqueci").click(function() {
                 $("#caixaLogin").hide(); //Ocultar
