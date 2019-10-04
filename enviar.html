@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+<!-- 
+    Para Acessar o projeto, habilite o Apache no XAMPP 
+    abra a URL  http://localhost/login/  no navegador FireFox (AZUL)
+-->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
+
+</head>
+
+<body class="bg-white">
+    <!-- Fundo Escuro -->
+
+    <main class="container mt-4">
+
+
+        <!-- Inicio Formulário de Login -->
+
+        <section class="row">
+
+            <div class="col-lg-4 offset-lg-4 bg-dark rounded" id="caixaLogin">
+
+                <h2 class="text-center mt-2">
+                    Formulário de Login
+                </h2>
+
+                <form action="receber.php" method="get" class="p-2" id="formLogin">
+
+                    <div class="form-group">
+
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" required minlength="5">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="e-mail" name="e-mail" id="e-mail" placeholder="E-mail" class="form-control" required >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="date" name="dataNascimento" id="dataNascimento" placeholder="Data de Nascimento" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="submit" value="Entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
