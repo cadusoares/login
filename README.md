@@ -2,7 +2,7 @@
 Sistema de login em PHP e JavaScript.
 
 # aula06 - 15/10/2019
-- ~Nada feito nessa aula~
+- Persistencia de dados no banco de dados
 
 # aula05 - 07/10/2019
 - Envio de dados do Front-end para o Beck-end, métodos GET e POST
@@ -67,3 +67,10 @@ git config --global http.proxy http://10.1.21.254:3128
 - Tecla Windowns 
 - Abrir o Visual Estudio Code (é o azul)
 - *Abrir a pasta* no VS CODE e escolha a pasta c:\xampp\htdocs\login
+
+## Importar o banco de dados
+- Acessar no navegador http://localhost/phpmyadmin
+- Clicar em importar
+- Selecionar o arquivo clicando em Browns 
+- Abra o arquivo 127.0.0.1.sql e clique em executar
+- O banco deve ter sido importado corretamente
