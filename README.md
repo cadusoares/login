@@ -1,8 +1,8 @@
 # login
 Sistema de login em PHP e JavaScript.
 
-# aula06 - 08/10/2019
-- Provaaaaaa
+# aula06 - 15/10/2019
+- ~Nada feito nessa aula~
 
 # aula05 - 07/10/2019
 - Envio de dados do Front-end para o Beck-end, métodos GET e POST
