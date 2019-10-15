@@ -1,4 +1,20 @@
 <?php
+
+//Conxão com o banco de dados
+
+require_once 'configBD.php';
+
+//Filtra a entrada
+
+function verificar_entrada($entrada){
+
+    $saida = htmlspecialchars($entrada);
+    $saida = stripslashes($saida);
+    $saida = trim($saida);
+    return $saida; //Retorna a saída limpa
+
+}
+
 //Teste se existe a ação
 
 if(isset($_POST['action'])){
@@ -40,5 +56,6 @@ if(isset($_POST['action'])){
         //redirecionando para index.php, negando o acesso
         //a esse arquivo diretamente 
         header("location:index.php");
+
     }
 
