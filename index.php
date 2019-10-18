@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="::Registrar::" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary btn-block">
+                        <input type="submit" value="Registrar" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p class="text-center">

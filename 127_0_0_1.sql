@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Out-2019 às 21:35
+-- Tempo de geração: 18-Out-2019 às 18:51
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -41,6 +41,7 @@ CREATE TABLE `usuario` (
   `dataCriado` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
+
 --
 -- Índices para tabelas despejadas
 --
@@ -52,6 +53,16 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idUsuario`),
   ADD UNIQUE KEY `nomeDoUsuario` (`nomeDoUsuario`),
   ADD UNIQUE KEY `emailUsuario` (`emailUsuario`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `idUsuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
