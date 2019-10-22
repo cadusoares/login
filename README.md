@@ -1,6 +1,9 @@
 # login
 Sistema de login em PHP e JavaScript.
 
+# aula08 - 21/10/2019
+- Inicio da aula 08
+
 # aula07 - 18/10/2019
 - Inicio da autentocação e entrada no sistema
 
