@@ -1,5 +1,8 @@
 <?php
 
+//Iniciando a sessão
+session_start();
+
 //Conxão com o banco de dados
 
 require_once 'configBD.php';
@@ -99,16 +102,19 @@ if(isset($_POST['action'])){
         $senhaUsuario = verifica_entrada($_POST['senhaUsuario']); 
         $senha = sha1($senhaUsuario);
 
-        $sql = $connect ->prepare("SELECT * FROM usuario WHERE senhaDoUsuario = ?
-        AND nomeDoUsuario = ?");
+    
 
-        $sql ->bind_param("ss", $senha, $nomeUsuario);
+        $sql = $connect->prepare("SELECT * FROM usuario WHERE 
+        senhaDoUsuario = ?  AND nomeDoUsuario = ?");
 
-        $sql ->execute();
+        $sql->bind_param("ss", $senha, $nomeUsuario);
+
+        $sql->execute();
 
         $busca = $sql->fetch();
 
         if($busca != null){
+            $_SESSION['nomeDoUsuario'] = $nomeUsuario;
             echo "ok";
         }else{
             echo"<p class='text-danger'>";

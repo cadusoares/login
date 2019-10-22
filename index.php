@@ -29,7 +29,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        Alo Ha Tchurmaáaaaaaaaaaaaaaaa!
+                    
                     </strong>
                 </div>
             </div>
@@ -190,6 +190,7 @@
                 $("#caixaLogin").show(); //Mostrar
                 $("#caixaRegistro").hide(); //Ocultar
             });
+
             //Cadastro de novo usuário
             $("#btnRegistrar").click(function(e) {
                 if (document
@@ -209,6 +210,7 @@
                 }
                 return true;
             });
+
             //Login
             $("#btnEntrar").click(function(e) {
                 if (document
@@ -222,12 +224,18 @@
                         data: $("#formLogin").serialize() + '&action=login',
                         success: function(resposta) {
                             $("#alerta").show();
-                            $(".resultado").html(resposta);
+                            //$(".resultado").html(resposta);
+                            if (resposta === "ok"){
+                                window.location = "perfil.php";
+                            } else {
+                                $(".resultado").html(resposta);
+                            } 
                         }
                     });
                 }
                 return true;
             });
+
             //Recuperação de senha
             $("#btnGerar").click(function(e) {
                 if (document
