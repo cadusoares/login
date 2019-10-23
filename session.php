@@ -19,6 +19,10 @@ require_once "configBD.php";
         $emailUsuario = $linha['emailUsuario'];
         $dataCriado = $linha['dataCriado'];
 
+        //Converter a data USA para BR
+        
+        $dataCriado = date('d/m/Y', strtotime($dataCriado));
+
 
     }else{
 
