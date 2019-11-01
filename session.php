@@ -6,6 +6,7 @@ require_once "configBD.php";
     if(isset($_SESSION['nomeDoUsuario'])){
 
         //logado
+
         $usuario = $_SESSION['nomeDoUsuario'];
         $sql = $connect->prepare("SELECT * FROM usuario 
         WHERE nomeDoUsuario =?");
@@ -18,6 +19,7 @@ require_once "configBD.php";
         $nomeCompleto = $linha['nomeCompleto'];
         $emailUsuario = $linha['emailUsuario'];
         $dataCriado = $linha['dataCriado'];
+        $fotoPerfil = $linha['foto'];
 
         //Converter a data USA para BR
         

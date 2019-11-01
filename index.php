@@ -199,8 +199,9 @@
         </div>
     </section>
     <!-- Fim da Seção de Recuperação de Senha -->
-    <!-- Início do formulário de 
-        cadastro de novos usuários -->
+
+    <!-- Início do formulário de cadastro de novos usuários -->
+
     <section class="row mt-5">
         <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaRegistro">
             <h2 class="text-center mt-2">Registre-se aqui</h2>
@@ -210,6 +211,9 @@
                 </div>
                 <div class="form-group">
                     <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" class="form-control" placeholder="Nome de usuário" required minlength="5">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="fotoPerfil" id="fotoPerfil" class="form-control" placeholder="URL da foto de Perfil" required minlength="5">
                 </div>
                 <div class="form-group">
                     <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail" required>
@@ -243,8 +247,9 @@
             </form>
         </div>
     </section>
-    <!-- Final do formulário de 
-        cadastro de novos usuários -->
+
+    <!-- Final do formulário de cadastro de novos usuários -->
+
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -269,7 +274,9 @@
             });
             $("#formLogin").validate();
             $("#formSenha").validate();
+
             //Mostrar e Ocultar Formulários
+            
             $("#btnEsqueci").click(function() {
                 $("#caixaLogin").hide(); //Ocultar Login
                 $("#caixaSenha").show(); //Mostrar Nova Senha

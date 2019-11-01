@@ -18,11 +18,11 @@ function verifica_entrada($entrada){
 
 }
 
-//Teste se existe a ação
+        //Teste se existe a ação
 
-if(isset($_POST['action'])){
+    if(isset($_POST['action'])){
 
-    //Teste se ação é igual a cadastro
+        //Teste se ação é igual a cadastro
 
     if($_POST['action'] == 'cadastro'){
 
@@ -37,6 +37,7 @@ if(isset($_POST['action'])){
         $emailUsuario = verifica_entrada($_POST['emailUsuario']);
         $senhaDoUsuario = verifica_entrada($_POST['senhaDoUsuario']);
         $senhaUsuarioConfirmar = verifica_entrada($_POST['senhaUsuarioConfirmar']);
+        $fotoPerfil= verifica_entrada($_POST['fotoPerfil']);
 
         //Data Atual no formato Banco de Dados
         $dataCriado = date("Y-m-d");
@@ -80,10 +81,10 @@ if(isset($_POST['action'])){
 
                 //Usuário pode ser cadastrado no banco de dados
                 $sql = $connect->prepare("INSERT into usuario (nomeDoUsuario,
-                nomeCompleto,emailUsuario, senhaDoUsuario, dataCriado)
-                values(?, ?, ?, ?, ?)");
-                $sql->bind_param("sssss", $nomeDoUsuario, $nomeCompleto,
-                $emailUsuario, $senhaCodificada, $dataCriado);
+                nomeCompleto,emailUsuario, senhaDoUsuario, dataCriado, foto)
+                values(?, ?, ?, ?, ?, ?)");
+                $sql->bind_param("ssssss", $nomeDoUsuario, $nomeCompleto,
+                $emailUsuario, $senhaCodificada, $dataCriado, $fotoPerfil);
                 if($sql->execute()){
                     echo"<p class='text-success'>Usuário cadastrado com Sucesso!!</p>";
 
