@@ -161,6 +161,8 @@
                         <div class="form-group">
                             <input type="submit" value="Ínicio" name="btnVoltar" id="btnVoltar" class="btn btn-primary btn-block">
                         </div>
+                        
+                        </form>
 
     </main>
 
@@ -323,6 +325,27 @@
                 return true;
             });
 
+
+            //Recuperação de senha
+            $("#btnGerar").click(function(e) {
+                if (document
+                    .querySelector("#formSenha")
+                    .checkValidity()) {
+                    e.preventDefault(); //Não abrir outra págin
+                    //Envio dos dados via Ajax
+                    $.ajax({
+                        url: 'receber_dados.php',
+                        method: 'post',
+                        data: $("#formSenha").serialize() + '&action=senha',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
+            });
+
             //Login
             $("#btnEntrar").click(function(e) {
                 if (document
@@ -348,25 +371,7 @@
                 return true;
             });
 
-            //Recuperação de senha
-            $("#btnGerar").click(function(e) {
-                if (document
-                    .querySelector("#formSenha")
-                    .checkValidity()) {
-                    e.preventDefault(); //Não abrir outra págin
-                    //Envio dos dados via Ajax
-                    $.ajax({
-                        url: 'receber_dados.php',
-                        method: 'post',
-                        data: $("#formSenha").serialize() + '&action=senha',
-                        success: function(resposta) {
-                            $("#alerta").show();
-                            $(".resultado").html(resposta);
-                        }
-                    });
-                }
-                return true;
-            });
+            
         });
         /*
          * Translated default messages for the jQuery validation plugin.
