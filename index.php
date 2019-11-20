@@ -162,7 +162,7 @@
                             <input type="submit" value="Ínicio" name="btnVoltar" id="btnVoltar" class="btn btn-primary btn-block">
                         </div>
                         
-                        </form>
+                    </form>
 
     </main>
 
